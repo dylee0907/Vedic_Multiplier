@@ -1,0 +1,328 @@
+Analysis & Synthesis report for multiplier_16bit_16by16_tb
+Mon May 16 16:59:39 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Port Connectivity Checks: "multiplier_16bit_16by16:i0|HA:i14"
+  6. Port Connectivity Checks: "multiplier_16bit_16by16:i0|CLA16:i5"
+  7. Port Connectivity Checks: "multiplier_16bit_16by16:i0|CLA16:i4"
+  8. Port Connectivity Checks: "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|HA:i10"
+  9. Port Connectivity Checks: "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|cla_adder_8bit:i5"
+ 10. Port Connectivity Checks: "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|cla_adder_8bit:i4"
+ 11. Port Connectivity Checks: "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|multiplier_16bit_4by4:i0|HA:i8"
+ 12. Port Connectivity Checks: "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|multiplier_16bit_4by4:i0|cla_adder_4bit:i5"
+ 13. Port Connectivity Checks: "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|multiplier_16bit_4by4:i0|cla_adder_4bit:i4"
+ 14. Port Connectivity Checks: "multiplier_16bit_16by16:i0"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Mon May 16 16:59:39 2022               ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; multiplier_16bit_16by16_tb                      ;
+; Top-level Entity Name              ; multiplier_16bit_16by16_tb                      ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
++------------------------------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                        ;
++----------------------------------------------------------------------------+----------------------------+----------------------------+
+; Option                                                                     ; Setting                    ; Default Value              ;
++----------------------------------------------------------------------------+----------------------------+----------------------------+
+; Device                                                                     ; EP2C50F672C6               ;                            ;
+; Top-level entity name                                                      ; multiplier_16bit_16by16_tb ; multiplier_16bit_16by16_tb ;
+; Family name                                                                ; Cyclone II                 ; Cyclone IV GX              ;
+; Use smart compilation                                                      ; Off                        ; Off                        ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                         ; On                         ;
+; Enable compact report table                                                ; Off                        ; Off                        ;
+; Restructure Multiplexers                                                   ; Auto                       ; Auto                       ;
+; Create Debugging Nodes for IP Cores                                        ; Off                        ; Off                        ;
+; Preserve fewer node names                                                  ; On                         ; On                         ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                        ; Off                        ;
+; Verilog Version                                                            ; Verilog_2001               ; Verilog_2001               ;
+; VHDL Version                                                               ; VHDL_1993                  ; VHDL_1993                  ;
+; State Machine Processing                                                   ; Auto                       ; Auto                       ;
+; Safe State Machine                                                         ; Off                        ; Off                        ;
+; Extract Verilog State Machines                                             ; On                         ; On                         ;
+; Extract VHDL State Machines                                                ; On                         ; On                         ;
+; Ignore Verilog initial constructs                                          ; Off                        ; Off                        ;
+; Iteration limit for constant Verilog loops                                 ; 5000                       ; 5000                       ;
+; Iteration limit for non-constant Verilog loops                             ; 250                        ; 250                        ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                         ; On                         ;
+; Infer RAMs from Raw Logic                                                  ; On                         ; On                         ;
+; Parallel Synthesis                                                         ; On                         ; On                         ;
+; DSP Block Balancing                                                        ; Auto                       ; Auto                       ;
+; NOT Gate Push-Back                                                         ; On                         ; On                         ;
+; Power-Up Don't Care                                                        ; On                         ; On                         ;
+; Remove Redundant Logic Cells                                               ; Off                        ; Off                        ;
+; Remove Duplicate Registers                                                 ; On                         ; On                         ;
+; Ignore CARRY Buffers                                                       ; Off                        ; Off                        ;
+; Ignore CASCADE Buffers                                                     ; Off                        ; Off                        ;
+; Ignore GLOBAL Buffers                                                      ; Off                        ; Off                        ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                        ; Off                        ;
+; Ignore LCELL Buffers                                                       ; Off                        ; Off                        ;
+; Ignore SOFT Buffers                                                        ; On                         ; On                         ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                        ; Off                        ;
+; Optimization Technique                                                     ; Balanced                   ; Balanced                   ;
+; Carry Chain Length                                                         ; 70                         ; 70                         ;
+; Auto Carry Chains                                                          ; On                         ; On                         ;
+; Auto Open-Drain Pins                                                       ; On                         ; On                         ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                        ; Off                        ;
+; Auto ROM Replacement                                                       ; On                         ; On                         ;
+; Auto RAM Replacement                                                       ; On                         ; On                         ;
+; Auto Shift Register Replacement                                            ; Auto                       ; Auto                       ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                       ; Auto                       ;
+; Auto Clock Enable Replacement                                              ; On                         ; On                         ;
+; Strict RAM Replacement                                                     ; Off                        ; Off                        ;
+; Allow Synchronous Control Signals                                          ; On                         ; On                         ;
+; Force Use of Synchronous Clear Signals                                     ; Off                        ; Off                        ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                        ; Off                        ;
+; Auto Resource Sharing                                                      ; Off                        ; Off                        ;
+; Allow Any RAM Size For Recognition                                         ; Off                        ; Off                        ;
+; Allow Any ROM Size For Recognition                                         ; Off                        ; Off                        ;
+; Allow Any Shift Register Size For Recognition                              ; Off                        ; Off                        ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                         ; On                         ;
+; Ignore translate_off and synthesis_off directives                          ; Off                        ; Off                        ;
+; Timing-Driven Synthesis                                                    ; Off                        ; Off                        ;
+; Report Parameter Settings                                                  ; On                         ; On                         ;
+; Report Source Assignments                                                  ; On                         ; On                         ;
+; Report Connectivity Checks                                                 ; On                         ; On                         ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                        ; Off                        ;
+; Synchronization Register Chain Length                                      ; 2                          ; 2                          ;
+; PowerPlay Power Optimization                                               ; Normal compilation         ; Normal compilation         ;
+; HDL message level                                                          ; Level2                     ; Level2                     ;
+; Suppress Register Optimization Related Messages                            ; Off                        ; Off                        ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                       ; 5000                       ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                       ; 5000                       ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                        ; 100                        ;
+; Clock MUX Protection                                                       ; On                         ; On                         ;
+; Auto Gated Clock Conversion                                                ; Off                        ; Off                        ;
+; Block Design Naming                                                        ; Auto                       ; Auto                       ;
+; SDC constraint protection                                                  ; Off                        ; Off                        ;
+; Synthesis Effort                                                           ; Auto                       ; Auto                       ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                         ; On                         ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                        ; Off                        ;
+; Analysis & Synthesis Message Level                                         ; Medium                     ; Medium                     ;
+; Disable Register Merging Across Hierarchies                                ; Auto                       ; Auto                       ;
+; Resource Aware Inference For Block RAM                                     ; On                         ; On                         ;
+; Synthesis Seed                                                             ; 1                          ; 1                          ;
++----------------------------------------------------------------------------+----------------------------+----------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier_16bit_16by16:i0|HA:i14"                                                                        ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; carry ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier_16bit_16by16:i0|CLA16:i5" ;
++----------+-------+----------+-----------------------------------+
+; Port     ; Type  ; Severity ; Details                           ;
++----------+-------+----------+-----------------------------------+
+; carry_in ; Input ; Info     ; Stuck at GND                      ;
++----------+-------+----------+-----------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier_16bit_16by16:i0|CLA16:i4" ;
++----------+-------+----------+-----------------------------------+
+; Port     ; Type  ; Severity ; Details                           ;
++----------+-------+----------+-----------------------------------+
+; carry_in ; Input ; Info     ; Stuck at GND                      ;
++----------+-------+----------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|HA:i10"                                               ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; carry ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|cla_adder_8bit:i5" ;
++------+-------+----------+-------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                 ;
++------+-------+----------+-------------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                            ;
++------+-------+----------+-------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|cla_adder_8bit:i4" ;
++------+-------+----------+-------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                 ;
++------+-------+----------+-------------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                            ;
++------+-------+----------+-------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|multiplier_16bit_4by4:i0|HA:i8"                       ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; carry ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|multiplier_16bit_4by4:i0|cla_adder_4bit:i5" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                          ;
++------+-------+----------+--------------------------------------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                                                     ;
++------+-------+----------+--------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|multiplier_16bit_4by4:i0|cla_adder_4bit:i4" ;
++------+-------+----------+--------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                          ;
++------+-------+----------+--------------------------------------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                                                     ;
++------+-------+----------+--------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier_16bit_16by16:i0"                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon May 16 16:59:38 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off multiplier_16bit_16by16_tb -c multiplier_16bit_16by16_tb
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Warning (10275): Verilog HDL Module Instantiation warning at multiplier_16bit_4by4.v(19): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at multiplier_16bit_8by8.v(24): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at multiplier_16bit_16by16.v(28): ignored dangling comma in List of Port Connections
+Warning (12125): Using design file multiplier_16bit_16by16_tb.v, which is not specified as a design file for the current project, but contains definitions for 10 design units and 10 entities in project
+    Info (12023): Found entity 1: HA
+    Info (12023): Found entity 2: multiplier_16bit_2by2
+    Info (12023): Found entity 3: cla_adder_4bit
+    Info (12023): Found entity 4: multiplier_16bit_4by4
+    Info (12023): Found entity 5: cla_adder_8bit
+    Info (12023): Found entity 6: multiplier_16bit_8by8
+    Info (12023): Found entity 7: cla4
+    Info (12023): Found entity 8: CLA16
+    Info (12023): Found entity 9: multiplier_16bit_16by16
+    Info (12023): Found entity 10: multiplier_16bit_16by16_tb
+Warning (10236): Verilog HDL Implicit Net warning at cla_adder_4bit.v(15): created implicit net for "c0"
+Warning (10236): Verilog HDL Implicit Net warning at multiplier_16bit_8by8.v(19): created implicit net for "y12"
+Warning (10236): Verilog HDL Implicit Net warning at multiplier_16bit_8by8.v(21): created implicit net for "y13"
+Warning (10236): Verilog HDL Implicit Net warning at multiplier_16bit_8by8.v(22): created implicit net for "y14"
+Warning (10236): Verilog HDL Implicit Net warning at multiplier_16bit_8by8.v(23): created implicit net for "y15"
+Info (12127): Elaborating entity "multiplier_16bit_16by16_tb" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at multiplier_16bit_16by16_tb.v(5): object "reset" assigned a value but never read
+Warning (10755): Verilog HDL warning at multiplier_16bit_16by16_tb.v(12): assignments to clk create a combinational loop
+Warning (10175): Verilog HDL warning at multiplier_16bit_16by16_tb.v(15): ignoring unsupported system task
+Warning (10175): Verilog HDL warning at multiplier_16bit_16by16_tb.v(16): ignoring unsupported system task
+Warning (10230): Verilog HDL assignment warning at multiplier_16bit_16by16_tb.v(30): truncated value with size 32 to match size of target (16)
+Warning (10175): Verilog HDL warning at multiplier_16bit_16by16_tb.v(32): ignoring unsupported system task
+Info (12128): Elaborating entity "multiplier_16bit_16by16" for hierarchy "multiplier_16bit_16by16:i0"
+Info (12128): Elaborating entity "multiplier_16bit_8by8" for hierarchy "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0"
+Info (12128): Elaborating entity "multiplier_16bit_4by4" for hierarchy "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|multiplier_16bit_4by4:i0"
+Info (12128): Elaborating entity "multiplier_16bit_2by2" for hierarchy "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|multiplier_16bit_4by4:i0|multiplier_16bit_2by2:i0"
+Info (12128): Elaborating entity "HA" for hierarchy "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|multiplier_16bit_4by4:i0|multiplier_16bit_2by2:i0|HA:i4"
+Info (12128): Elaborating entity "cla_adder_4bit" for hierarchy "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|multiplier_16bit_4by4:i0|cla_adder_4bit:i4"
+Info (12128): Elaborating entity "cla_adder_8bit" for hierarchy "multiplier_16bit_16by16:i0|multiplier_16bit_8by8:i0|cla_adder_8bit:i4"
+Info (12128): Elaborating entity "CLA16" for hierarchy "multiplier_16bit_16by16:i0|CLA16:i4"
+Info (12128): Elaborating entity "cla4" for hierarchy "multiplier_16bit_16by16:i0|CLA16:i4|cla4:CLA_1"
+Error (12061): Can't synthesize current design -- Top partition does not contain any logic
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/altera/verilog_220412/output_files/multiplier_16bit_16by16_tb.map.smsg
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 16 warnings
+    Error: Peak virtual memory: 4584 megabytes
+    Error: Processing ended: Mon May 16 16:59:39 2022
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/altera/verilog_220412/output_files/multiplier_16bit_16by16_tb.map.smsg.
+
+

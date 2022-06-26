@@ -1,0 +1,225 @@
+|multiplier_16bit_4by4
+a[0] => a[0].IN2
+a[1] => a[1].IN2
+a[2] => a[2].IN2
+a[3] => a[3].IN2
+b[0] => b[0].IN2
+b[1] => b[1].IN2
+b[2] => b[2].IN2
+b[3] => b[3].IN2
+out[0] <= multiplier_16bit_2by2:i0.port2
+out[1] <= multiplier_16bit_2by2:i0.port2
+out[2] <= cla_adder_4bit:i5.port3
+out[3] <= cla_adder_4bit:i5.port3
+out[4] <= cla_adder_4bit:i5.port3
+out[5] <= cla_adder_4bit:i5.port3
+out[6] <= HA:i7.port2
+out[7] <= HA:i8.port2
+
+
+|multiplier_16bit_4by4|multiplier_16bit_2by2:i0
+a[0] => i0.IN0
+a[0] => i1.IN0
+a[1] => i2.IN0
+a[1] => i3.IN0
+b[0] => i0.IN1
+b[0] => i2.IN1
+b[1] => i1.IN1
+b[1] => i3.IN1
+out[0] <= i0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= HA:i4.port2
+out[2] <= HA:i5.port2
+out[3] <= HA:i5.port3
+
+
+|multiplier_16bit_4by4|multiplier_16bit_2by2:i0|HA:i4
+x => i0.IN0
+x => i1.IN0
+y => i0.IN1
+y => i1.IN1
+sum <= i0.DB_MAX_OUTPUT_PORT_TYPE
+carry <= i1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_16bit_4by4|multiplier_16bit_2by2:i0|HA:i5
+x => i0.IN0
+x => i1.IN0
+y => i0.IN1
+y => i1.IN1
+sum <= i0.DB_MAX_OUTPUT_PORT_TYPE
+carry <= i1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_16bit_4by4|multiplier_16bit_2by2:i1
+a[0] => i0.IN0
+a[0] => i1.IN0
+a[1] => i2.IN0
+a[1] => i3.IN0
+b[0] => i0.IN1
+b[0] => i2.IN1
+b[1] => i1.IN1
+b[1] => i3.IN1
+out[0] <= i0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= HA:i4.port2
+out[2] <= HA:i5.port2
+out[3] <= HA:i5.port3
+
+
+|multiplier_16bit_4by4|multiplier_16bit_2by2:i1|HA:i4
+x => i0.IN0
+x => i1.IN0
+y => i0.IN1
+y => i1.IN1
+sum <= i0.DB_MAX_OUTPUT_PORT_TYPE
+carry <= i1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_16bit_4by4|multiplier_16bit_2by2:i1|HA:i5
+x => i0.IN0
+x => i1.IN0
+y => i0.IN1
+y => i1.IN1
+sum <= i0.DB_MAX_OUTPUT_PORT_TYPE
+carry <= i1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_16bit_4by4|multiplier_16bit_2by2:i2
+a[0] => i0.IN0
+a[0] => i1.IN0
+a[1] => i2.IN0
+a[1] => i3.IN0
+b[0] => i0.IN1
+b[0] => i2.IN1
+b[1] => i1.IN1
+b[1] => i3.IN1
+out[0] <= i0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= HA:i4.port2
+out[2] <= HA:i5.port2
+out[3] <= HA:i5.port3
+
+
+|multiplier_16bit_4by4|multiplier_16bit_2by2:i2|HA:i4
+x => i0.IN0
+x => i1.IN0
+y => i0.IN1
+y => i1.IN1
+sum <= i0.DB_MAX_OUTPUT_PORT_TYPE
+carry <= i1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_16bit_4by4|multiplier_16bit_2by2:i2|HA:i5
+x => i0.IN0
+x => i1.IN0
+y => i0.IN1
+y => i1.IN1
+sum <= i0.DB_MAX_OUTPUT_PORT_TYPE
+carry <= i1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_16bit_4by4|multiplier_16bit_2by2:i3
+a[0] => i0.IN0
+a[0] => i1.IN0
+a[1] => i2.IN0
+a[1] => i3.IN0
+b[0] => i0.IN1
+b[0] => i2.IN1
+b[1] => i1.IN1
+b[1] => i3.IN1
+out[0] <= i0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= HA:i4.port2
+out[2] <= HA:i5.port2
+out[3] <= HA:i5.port3
+
+
+|multiplier_16bit_4by4|multiplier_16bit_2by2:i3|HA:i4
+x => i0.IN0
+x => i1.IN0
+y => i0.IN1
+y => i1.IN1
+sum <= i0.DB_MAX_OUTPUT_PORT_TYPE
+carry <= i1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_16bit_4by4|multiplier_16bit_2by2:i3|HA:i5
+x => i0.IN0
+x => i1.IN0
+y => i0.IN1
+y => i1.IN1
+sum <= i0.DB_MAX_OUTPUT_PORT_TYPE
+carry <= i1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_16bit_4by4|cla_adder_4bit:i4
+a[0] => p0.IN0
+a[0] => g0.IN0
+a[1] => p1.IN0
+a[1] => g1.IN0
+a[2] => p2.IN0
+a[2] => g2.IN0
+a[3] => p3.IN0
+a[3] => g3.IN0
+b[0] => p0.IN1
+b[0] => g0.IN1
+b[1] => p1.IN1
+b[1] => g1.IN1
+b[2] => p2.IN1
+b[2] => g2.IN1
+b[3] => p3.IN1
+b[3] => g3.IN1
+cin => c1.IN1
+cin => c3.IN1
+cin => c4.IN1
+cin => sum.IN1
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= c4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_16bit_4by4|cla_adder_4bit:i5
+a[0] => p0.IN0
+a[0] => g0.IN0
+a[1] => p1.IN0
+a[1] => g1.IN0
+a[2] => p2.IN0
+a[2] => g2.IN0
+a[3] => p3.IN0
+a[3] => g3.IN0
+b[0] => p0.IN1
+b[0] => g0.IN1
+b[1] => p1.IN1
+b[1] => g1.IN1
+b[2] => p2.IN1
+b[2] => g2.IN1
+b[3] => p3.IN1
+b[3] => g3.IN1
+cin => c1.IN1
+cin => c3.IN1
+cin => c4.IN1
+cin => sum.IN1
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= c4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_16bit_4by4|HA:i7
+x => i0.IN0
+x => i1.IN0
+y => i0.IN1
+y => i1.IN1
+sum <= i0.DB_MAX_OUTPUT_PORT_TYPE
+carry <= i1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_16bit_4by4|HA:i8
+x => i0.IN0
+x => i1.IN0
+y => i0.IN1
+y => i1.IN1
+sum <= i0.DB_MAX_OUTPUT_PORT_TYPE
+carry <= i1.DB_MAX_OUTPUT_PORT_TYPE
+
+

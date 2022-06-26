@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at cla_adder_16bit.v(5): object "C" differs only in case from object "c" in the same scope
+Info (10281): Verilog HDL Declaration information at cla_4.v(5): object "C" differs only in case from object "c" in the same scope
